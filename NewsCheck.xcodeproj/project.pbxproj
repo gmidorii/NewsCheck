@@ -15,6 +15,8 @@
 		070846F11E613FFA006D4C96 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 070846EF1E613FFA006D4C96 /* LaunchScreen.storyboard */; };
 		070846FC1E613FFA006D4C96 /* NewsCheckTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 070846FB1E613FFA006D4C96 /* NewsCheckTests.swift */; };
 		070847071E613FFA006D4C96 /* NewsCheckUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 070847061E613FFA006D4C96 /* NewsCheckUITests.swift */; };
+		07B39EB21E614E1F00E582C9 /* MyNewsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B39EB11E614E1F00E582C9 /* MyNewsData.swift */; };
+		07B39EB41E614EFD00E582C9 /* MyNewsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B39EB31E614EFD00E582C9 /* MyNewsCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		070847021E613FFA006D4C96 /* NewsCheckUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NewsCheckUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		070847061E613FFA006D4C96 /* NewsCheckUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsCheckUITests.swift; sourceTree = "<group>"; };
 		070847081E613FFA006D4C96 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		07B39EB11E614E1F00E582C9 /* MyNewsData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyNewsData.swift; sourceTree = "<group>"; };
+		07B39EB31E614EFD00E582C9 /* MyNewsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyNewsCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +110,8 @@
 				070846ED1E613FFA006D4C96 /* Assets.xcassets */,
 				070846EF1E613FFA006D4C96 /* LaunchScreen.storyboard */,
 				070846F21E613FFA006D4C96 /* Info.plist */,
+				07B39EB11E614E1F00E582C9 /* MyNewsData.swift */,
+				07B39EB31E614EFD00E582C9 /* MyNewsCell.swift */,
 			);
 			path = NewsCheck;
 			sourceTree = "<group>";
@@ -264,6 +270,8 @@
 			files = (
 				070846E91E613FFA006D4C96 /* SecondViewController.swift in Sources */,
 				070846E51E613FFA006D4C96 /* AppDelegate.swift in Sources */,
+				07B39EB21E614E1F00E582C9 /* MyNewsData.swift in Sources */,
+				07B39EB41E614EFD00E582C9 /* MyNewsCell.swift in Sources */,
 				070846E71E613FFA006D4C96 /* FirstViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -507,6 +515,7 @@
 				0708470D1E613FFA006D4C96 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0708470E1E613FFA006D4C96 /* Build configuration list for PBXNativeTarget "NewsCheckTests" */ = {
 			isa = XCConfigurationList;
@@ -515,6 +524,7 @@
 				070847101E613FFA006D4C96 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		070847111E613FFA006D4C96 /* Build configuration list for PBXNativeTarget "NewsCheckUITests" */ = {
 			isa = XCConfigurationList;
@@ -523,6 +533,7 @@
 				070847131E613FFA006D4C96 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
