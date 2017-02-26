@@ -23,3 +23,8 @@ xcuserdata/
 *.ipa
 *.dSYM.zip
 *.dSYM
+
+## Cocoapods
+Pods
+Podfile.lock
+
