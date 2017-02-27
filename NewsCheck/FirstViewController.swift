@@ -42,7 +42,7 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
     
     func fetchNews() {
         Alamofire
-            .request("http://0.0.0.0:8080/news?lang=Go")
+            .request(Config.URL_API)
             .responseJSON { response in
                 guard let object = response.result.value else {
                     return
