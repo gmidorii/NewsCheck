@@ -100,11 +100,30 @@
                     <tabBarItem key="tabBarItem" title="First" image="first" id="acW-dT-cKf"/>
                     <connections>
                         <outlet property="tableView" destination="qpR-f3-q90" id="uiA-1S-yye"/>
+                        <segue destination="Qh5-96-lhW" kind="show" identifier="toWeb" id="vvI-vX-gNu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="749.60000000000002" y="-320.68965517241384"/>
+        </scene>
+        <!--Web View Controller-->
+        <scene sceneID="fSw-8t-rDB">
+            <objects>
+                <viewController id="Qh5-96-lhW" customClass="WebViewController" customModule="NewsCheck" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="S8Y-qb-dr7"/>
+                        <viewControllerLayoutGuide type="bottom" id="1Xe-Ay-up2"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="PWU-sa-u05" customClass="UIWebView">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lXD-2v-fXr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1540" y="-321"/>
         </scene>
         <!--Second-->
         <scene sceneID="wg7-f3-ORb">

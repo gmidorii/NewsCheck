@@ -11,8 +11,10 @@ import Foundation
 class MyNewsData: NSObject {
     
     var name: String
+    var url: String
     
-    init(name: String) {
+    init(name: String, url: String) {
         self.name = name
+        self.url = url
     }
 }

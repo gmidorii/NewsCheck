@@ -15,6 +15,7 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
     @IBOutlet weak var tableView: UITableView!
     
     var myNewsDatas = [MyNewsData]()
+    var selectedUrl : String!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,6 +41,20 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
         return cell
     }
     
+    func tableView(_ table: UITableView,didSelectRowAt indexPath: IndexPath) {
+        selectedUrl = myNewsDatas[indexPath.row].url
+        if selectedUrl != nil {
+            performSegue(withIdentifier: "toWeb", sender: nil)
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any!) {
+        if segue.identifier == "toWeb" {
+            let webVC: WebViewController = (segue.destination as? WebViewController)!
+            webVC.selectedUrl = selectedUrl
+        }
+    }
+    
     func fetchNews() {
         Alamofire
             .request(Config.URL_API)
@@ -50,7 +65,7 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
                 
                 let json = JSON(object)
                 json["items"].forEach {(_, json) in
-                    self.myNewsDatas.append(MyNewsData(name: json["title"].string!))
+                    self.myNewsDatas.append(MyNewsData(name: json["title"].string!, url: json["url"].string!))
                     print(json["title"].string!)
                 }
                 self.tableView.reloadData()
