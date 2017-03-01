@@ -13,6 +13,14 @@ class WebViewController: UIViewController, UIWebViewDelegate{
     @IBOutlet var myWebView: UIWebView!
     var selectedUrl: String!
     
+    @IBOutlet weak var myBack: UIBarButtonItem!
+    @IBOutlet weak var myToolbar: UIToolbar!
+        
+    @IBAction func goBack(_ sender: UIBarButtonItem) {
+        print("test")
+        self.myWebView.goBack()
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -22,6 +30,8 @@ class WebViewController: UIViewController, UIWebViewDelegate{
         let request: NSURLRequest = NSURLRequest(url: url as URL)
         myWebView.loadRequest(request as URLRequest)
         self.setupSwipeGestures()
+        self.myBack.isEnabled = self.myWebView.canGoBack
+        self.myWebView.bringSubview(toFront: myToolbar)
     }
 
     override func didReceiveMemoryWarning() {

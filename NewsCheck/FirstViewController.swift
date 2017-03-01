@@ -44,13 +44,13 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
     func tableView(_ table: UITableView,didSelectRowAt indexPath: IndexPath) {
         selectedUrl = myNewsDatas[indexPath.row].url
         if selectedUrl != nil {
-            performSegue(withIdentifier: "toWeb", sender: nil)
+            performSegue(withIdentifier: "toWebView", sender: nil)
         }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any!) {
-        if segue.identifier == "toWeb" {
-            let webVC: WebViewController = (segue.destination as? WebViewController)!
+        if segue.identifier == "toWebView" {
+            let webVC: MyWebViewController = (segue.destination as? MyWebViewController)!
             webVC.selectedUrl = selectedUrl
         }
     }
