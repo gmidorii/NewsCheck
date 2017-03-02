@@ -15,7 +15,7 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
     @IBOutlet weak var tableView: UITableView!
     
     var myNewsDatas = [MyNewsData]()
-    var selectedUrl : String!
+    var selectedNews : MyNewsData!
     
     @IBAction func goBack(_ segue:UIStoryboardSegue) {}
     
@@ -44,8 +44,8 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
     }
     
     func tableView(_ table: UITableView,didSelectRowAt indexPath: IndexPath) {
-        selectedUrl = myNewsDatas[indexPath.row].url
-        if selectedUrl != nil {
+        selectedNews = myNewsDatas[indexPath.row]
+        if selectedNews != nil {
             performSegue(withIdentifier: "toWebView", sender: nil)
         }
     }
@@ -53,7 +53,7 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
     override func prepare(for segue: UIStoryboardSegue, sender: Any!) {
         if segue.identifier == "toWebView" {
             let webVC: MyWebViewController = (segue.destination as? MyWebViewController)!
-            webVC.selectedUrl = selectedUrl
+            webVC.selectedNews = selectedNews
         }
     }
     

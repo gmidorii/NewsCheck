@@ -12,13 +12,13 @@ class MyWebViewController: UIViewController {
 
     @IBOutlet var myWebView: UIWebView!
     var selectedUrl : String!
+    var selectedNews : MyNewsData!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        print(selectedUrl)
-        let url = NSURL(string: selectedUrl)!
+        let url = NSURL(string: selectedNews.url)!
         let request: NSURLRequest = NSURLRequest(url: url as URL)
         myWebView.loadRequest(request as URLRequest)
         self.setupSwipeGestures()
