@@ -10,8 +10,8 @@ import UIKit
 
 class MyWebViewController: UIViewController {
 
-    @IBOutlet weak var myWebView: UIWebView!
-    var selectedUrl: String!
+    @IBOutlet var myWebView: UIWebView!
+    var selectedUrl : String!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,7 +21,7 @@ class MyWebViewController: UIViewController {
         let url = NSURL(string: selectedUrl)!
         let request: NSURLRequest = NSURLRequest(url: url as URL)
         myWebView.loadRequest(request as URLRequest)
-        //self.setupSwipeGestures()
+        self.setupSwipeGestures()
     }
 
     override func didReceiveMemoryWarning() {
@@ -29,6 +29,15 @@ class MyWebViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    func setupSwipeGestures() {
+        let gestureToRight = UISwipeGestureRecognizer(target: self.myWebView, action: #selector(UIWebView.goBack))
+        gestureToRight.direction = UISwipeGestureRecognizerDirection.right
+        self.myWebView.addGestureRecognizer(gestureToRight)
+        
+        let gestureToLeft = UISwipeGestureRecognizer(target: self.myWebView, action: #selector(UIWebView.goForward))
+        gestureToLeft.direction = UISwipeGestureRecognizerDirection.left
+        self.myWebView.addGestureRecognizer(gestureToLeft)
+    }
 
     /*
     // MARK: - Navigation

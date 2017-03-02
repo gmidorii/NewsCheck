@@ -17,6 +17,8 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
     var myNewsDatas = [MyNewsData]()
     var selectedUrl : String!
     
+    @IBAction func goBack(_ segue:UIStoryboardSegue) {}
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
