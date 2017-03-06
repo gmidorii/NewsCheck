@@ -265,6 +265,7 @@
 				TargetAttributes = {
 					070846E01E613FF9006D4C96 = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = F75PR4YX4C;
 						ProvisioningStyle = Automatic;
 					};
 					070846F61E613FFA006D4C96 = {
@@ -626,7 +627,9 @@
 			baseConfigurationReference = A8DE83B68A58781E0B834622 /* Pods-NewsCheck.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = F75PR4YX4C;
 				INFOPLIST_FILE = NewsCheck/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_SWIFT_FLAGS = "$(inherited) \"-D\" \"COCOAPODS\" -D DEBUG";
 				PRODUCT_BUNDLE_IDENTIFIER = midorigreen.com.github.NewsCheck;
@@ -640,7 +643,9 @@
 			baseConfigurationReference = 7A9578E019DC69E0B502CE59 /* Pods-NewsCheck.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = F75PR4YX4C;
 				INFOPLIST_FILE = NewsCheck/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = midorigreen.com.github.NewsCheck;
 				PRODUCT_NAME = "$(TARGET_NAME)";

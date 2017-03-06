@@ -28,3 +28,6 @@ xcuserdata/
 Pods
 Podfile.lock
 
+## config file
+Config.swift
+
